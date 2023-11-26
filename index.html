@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h2>Starbhak Mart</h2>
+        </header>
+        <div class="row">
+          <div class="col col-lg-12" style="margin-top: 15px;">
+
+            <div class="konten">
+              <nav class="nav1">
+                <select name="pilih" id="pilih" style="text-align: center; background-color: aqua;" >
+                    <option value="take away">Take Away</option>
+                    <option value="dine in">dine in</option>
+                  </select>
+                  <div class="user">
+                    <span class="material-symbols-outlined">
+                      account_circle
+                      </span>
+                    <div class="card-header">
+                      Mang Jay
+                    </div>
+                </div>
+                <div class="belanja">
+                  <div class="barang" style="display: none;"> 
+                    <div class="detail-kiri">
+                        <p id="nama-barang" style="font-size: small; font-weight: 500;"></p>
+                        <p id="harga-satuan" style="text-align: right; font-size: small;"></p>
+                    </div>
+                    <div class="detail-kanan">
+                        <p class="normal">Unit Price : <span id="harga-banyak"></span></p>
+                        <p class="normal" style="display: flex; justify-content: space-between; gap: 4em;">Quantity : <span class="stock" id="stok-${itemName}"></span></p>
+                    </div>
+                    <button id="remove">
+                        <span class="material-symbols-outlined" id="hapus">
+                            delete
+                            </span>
+                    </button>
+                </div>
+                </div>
+                <div class="payment">
+                  <p id="diskon">Discount : </p>
+                  <p id="totalPrice" style="display: none;"></p>
+                  <p style="display: flex; justify-content: space-between;">Tax : <span id="taxDiscount"></span></p>
+                  <div class="pay">
+                      <p id="totalAmount">Total Amount : </p>
+                  </div>
+                </div>
+              </nav>
+                <div class="item">
+                    <nav>
+                        <div class="list">
+                          <h4>Item List</h4>
+                        </div>
+                        <div class="widget">
+                          <button class="btn">
+                            <i class='bx bx-search bx-sm'></i>
+                        </button>
+                        <button class="btn">
+                            <i class='bx bx-menu bx-sm'></i>
+                        </button>
+                        <button class="btn">
+                            <i class='bx bx-sort-alt-2 bx-sm'></i>
+                        </button>
+                        </div>
+                      </nav>
+                    <section>
+                        <div class="row" id="row1" style= "overflow-y: scroll; margin-top: 2px; margin-left: 10px; margin-right: 1px; border: 10px;">
+                            <div class="card">
+                               <img src="aset/veg-burger.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h6 class="nama">Burger</h6>
+                                <p class="harga">Rp. 35.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/eskrim-coklat.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h6 class="nama">Es Krim</h6>
+                                <p class="harga">Rp. 5.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/nasi-padang.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Nasi Padang</h6>
+                                <p class="harga">Rp. 10.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/62dbd7ac6e943.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Pizza</h6>
+                                <p class="harga">Rp. 125.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/nasi-uduk-kobe.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Nasi Uduk</h6>
+                                <p class="harga">Rp. 12.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/pngwing.com.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Hamburger</h6>
+                                <p class="harga">Rp. 55.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/soda.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Soda</h6>
+                                <p class="harga">Rp. 8.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/lg_62a8446eeabac.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Teh Botol</h6>
+                                <p class="harga">Rp. 5.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/pngwing.com (1).png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">French Fries</h6>
+                                <p class="harga">Rp. 9.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/ham.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Sandwich</h6>
+                                <p class="harga">Rp. 8.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/Renyah-dan-Lezat-Ini-Cara-Membuat-Fried-Chicken-Ala-Restoran-di-Rumah.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Fried Chicken</h6>
+                                <p class="harga">Rp. 12.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/Resep-Nasi-Goreng-Ikan-Teri.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Nasi Goreng</h6>
+                                <p class="harga">Rp. 16.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/photo.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Gudeg Komplit</h6>
+                                <p class="harga">Rp. 15.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/mie-ayam-kecap.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Mie Ayam</h6>
+                                <p class="harga">Rp. 13.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/6402073d9d6bc.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Ramen</h6>
+                                <p class="harga">Rp. 24.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/ice-lemon.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Iced Lemon</h6>
+                                <p class="harga">Rp. 5.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/5f8893b14c6fe4e24da321d667a764d6.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Soto</h6>
+                                <p class="harga">Rp. 17.000</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                               <img src="aset/lassi-salted.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h6 class="nama">Lassi Salted</h6>
+                                <p class="harga">Rp. 9.000</p>
+                              </div>
+                            </div>
+                          </div>    
+                    </section>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="print">
+          <button class="btn btn-primary btn-lg" type="submit">Payment<span class="material-symbols-outlined">
+            shopping_cart
+            </span>
+          </button>
+        </div>
+        <footer>
+          <p>Ready</p>
+      </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="">js/script.js</script>
+</html>
